@@ -1,34 +1,13 @@
-# Paddle OCR
+# Paddle OCR 활용
 
-## Paddle OCR Rust
+## Paddle OCR 
+### Rust Paddle OCR 
 
 [paddle-ocr](https://github.com/aws-samples/sample-aws-idp-pipeline/tree/main/packages/lambda/paddle-ocr) 기준으로 Paddle OCR을 적용합니다. 이 repository는 [Rust PaddleOCR](https://github.com/zibo-chen/rust-paddle-ocr)을 베이스로 하고 있습니다.
 
-## Paddle OCR 3
+### Paddle OCR 3
 
-[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) 적용시의 동작은 아래와 같습니다. 문제는 성능이 Paddle OCR Rust에 비해 확연히 떨어집니다.
-
-### 설치
-
-- CPU 전용
-
-```text
-python -m pip install paddlepaddle==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cpu/
-```
-
-- GPU 사용 (CUDA 12.6)
-
-```text
-python -m pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
-```
-
-- 설치 확인 방법
-
-```text
-python -c "import paddle; print(paddle.__version__)"
-```
-
-### 활용 방법
+[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)은 빠르게 OCR을 수행할 수 있습니다.
 
 - 기본 OCR
 
@@ -247,7 +226,7 @@ docker build --platform linux/amd64 -t my-paddleocr-light ./paddle-ocr3
 
 검출 모델은 공통으로 `PP-OCRv5_server_det.mnn`을 사용합니다.
 
-### 실행 결과
+## 실행 결과
 
 ![image](./app/complex_parsing_hotel_info.png) 을 아래와 같이 입력으로 넣습니다.
 
