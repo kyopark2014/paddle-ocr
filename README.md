@@ -1,6 +1,14 @@
 # Paddle OCR
 
-## 설치
+## Paddle OCR Rust
+
+[paddle-ocr](https://github.com/aws-samples/sample-aws-idp-pipeline/tree/main/packages/lambda/paddle-ocr) 기준으로 Paddle OCR을 적용합니다. 이 repository는 [Rust PaddleOCR](https://github.com/zibo-chen/rust-paddle-ocr)을 베이스로 하고 있습니다.
+
+## Paddle OCR 3
+
+[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) 적용시의 동작은 아래와 같습니다. 문제는 성능이 Paddle OCR Rust에 비해 확연히 떨어집니다.
+
+### 설치
 
 - CPU 전용
 
@@ -20,7 +28,7 @@ python -m pip install paddlepaddle-gpu==3.2.0 -i https://www.paddlepaddle.org.cn
 python -c "import paddle; print(paddle.__version__)"
 ```
 
-### Paddle OCR
+### 활용 방법
 
 - 기본 OCR
 
@@ -71,29 +79,10 @@ rec_model = TextRecognition()
 rec_output = rec_model.predict("image.png")
 ```
 
-### Docker로 설치하기
-
-- CPU 버전
-
-```text
-docker run --name paddleocr \
-  -v $PWD:/paddle \
-  --shm-size=8G \
-  --network=host \
-  -it ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddle:3.0.0 /bin/bash
-```
-
-- GPU 버전 (CUDA 11.8)
-
-```text
-docker run --gpus all --name paddleocr \
-  -v $PWD:/paddle \
-  --shm-size=8G \
-  --network=host \
-  -it ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddle:3.0.0-gpu-cuda11.8-cudnn8.9-trt8.6 /bin/bash
-```
 
 ## Deploy
+
+여기서는 [Rust PaddleOCR](https://github.com/zibo-chen/rust-paddle-ocr)을 활용하여 [paddle-ocr](https://github.com/aws-samples/sample-aws-idp-pipeline/tree/main/packages/lambda/paddle-ocr)을 기준으로 구현됩니다.
 
 ### 구조
 
