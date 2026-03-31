@@ -1,0 +1,7 @@
+**/__pycache__/
+**/*.pyc
+app/
+paddle-light/
+paddle-ocr3/
+paddle-ocr-lambda/
+README.md

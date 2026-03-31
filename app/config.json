@@ -1,0 +1,7 @@
+{
+    "region": "us-west-2",
+    "projectName": "paddle-ocr",
+    "accountId": "262976740991",
+    "s3_bucket": "storage-for-agent-skills-262976740991-us-west-2",
+    "s3_arn": "arn:aws:s3:::storage-for-agent-skills-262976740991-us-west-2"
+}

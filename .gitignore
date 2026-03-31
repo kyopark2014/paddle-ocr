@@ -1,0 +1,7 @@
+# Rust build artifacts
+paddle-ocr/target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
