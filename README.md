@@ -284,8 +284,3 @@ python app/run.py app/complex_parsing_hotel_info.png
 임직원할인 적용불가 안내를받을경우 지원팀 김은미 선임매니저에게문의(인사변동으로인한누락사유등)
 ```
 
-Paddle OCR의 결과는 만족스럽지 않습니다.
-
-반면에 Claude Sonnet 3.6으로 markdown으로 분석한 결과는 아래와 같이 표를 적절하게 분석해줍니다.
-
-<img width="795" height="731" alt="image" src="https://github.com/user-attachments/assets/2f43845d-eaab-4b1b-bff6-151b8f0e2e06" />
